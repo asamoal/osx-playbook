@@ -1,3 +1,5 @@
+# https://chrome.google.com/webstore/detail/mailto/gppbppehiogfokmpligejhaepeopajdf
+# https://e.mail.ru/compose/?to={to}
 ---
 configure_dotfiles: yes
 configure_sudoers: yes
@@ -12,6 +14,16 @@ dotfiles_files:
   - .vimrc
   - .osx.sh
 
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - spectralkh/tap
+  - homebrew/cask-versions
+  - dart-lang/dart
+  - heroku/brew
+  - hudochenkov/sshpass
+#  - adoptopenjdk/openjdk
+
 homebrew_installed_packages:
   - autoconf
   - ansible-lint
@@ -24,6 +36,9 @@ homebrew_installed_packages:
   - gifsicle
   - git
   - gcc
+  - cmake
+  - asio
+  - boost
   - go
   - scala
   - erlang
@@ -52,6 +67,7 @@ homebrew_installed_packages:
   - pkg-config
   - perl
   - libuv
+  - heroku
   - jpeg
   - watchman
   - imagemagick
@@ -68,24 +84,20 @@ homebrew_installed_packages:
   - ideviceinstaller
   - ios-deploy
   - cocoapods
-
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
-  - spectralkh/tap
-  - homebrew/cask-versions
-  - adoptopenjdk/openjdk
-  - dart-lang/dart
+  - fish
+  - sshpass
+  - libsass
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - whatsapp
+  - intel-power-gadget
   - keepassx
   - folx
   - vk-messenger
   - 1password
   - flutter
-  - sublime-text
+  - visual-studio-code-insiders
   - docker
   - dropbox
   - zoomus
@@ -94,24 +106,29 @@ homebrew_cask_apps:
   - google-chrome-beta
   - google-cloud-sdk
   - iina
+  - anki
   - java
-  - adoptopenjdk11
-  - keka
+  - adoptopenjdk
+  - adoptopenjdk8
+  - keka-beta
   - jetbrains-toolbox
   - wireshark
   - macdown
   - steam
   - kitematic
-  - charles
+  - charles-beta
   - microsoft-remote-desktop-beta
   - tunnelblick
+  - virtualbox-beta
   - 4k-video-downloader
   - teamviewer
   - tor-browser
   - zeplin
   - postman
-  - handbrake
+  - handbrake-nightly
   - vagrant
+  - vagrant-manager
+  - adobe-creative-cloud
   - skype
   - xquartz
   - tunnelbear
@@ -140,10 +157,14 @@ yarn_packages:
   - name: node-sass
   - name: now
   - name: webtorrent-cli
+  - name: electron
   - name: "@angular/cli"
   - name: gatsby-cli
   - name: create-react-app
   - name: react-native-cli
+  - name: verdaccio
+  - name: json
+# yarn global add bower pm2 typescript vtop node-sass now webtorrent-cli electron "@angular/cli" gatsby-cli create-react-app react-native-cli verdaccio json
 pip_packages: []
   # - name: mkdocs
   #   state: present # present/absent/latest, default: present

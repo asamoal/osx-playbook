@@ -251,7 +251,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 ###############################################################################
 
 # Set the icon size of Dock items
-defaults write com.apple.dock tilesize -int 55
+defaults write com.apple.dock tilesize -int 75
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -299,7 +299,7 @@ sudo ln -sf /Applications/Xcode.app/Contents/Developer/Applications/Simulator.ap
 #defaults write com.apple.dock wvous-br-corner -int 2
 #defaults write com.apple.dock wvous-br-modifier -int 0
 # Top right screen corner → Put display to sleep
-defaults write com.apple.dock wvous-tr-corner -int 10
+#defaults write com.apple.dock wvous-tr-corner -int 10
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Desktop
 #defaults write com.apple.dock wvous-bl-corner -int 4
@@ -375,8 +375,6 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 # Enable the "Anywhere" option
 sudo spctl --master-disable
-
-# For Terminal theme, see: https://github.com/geerlingguy/mac-dev-playbook
 
 ###############################################################################
 # Activity Monitor                                                            #
@@ -459,3 +457,7 @@ if [[ ! ($* == *--no-restart*) ]]; then
 fi
 
 printf "Please log out and log back in to make all settings take effect.\n"
+
+# Make "fish" a default shell
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
