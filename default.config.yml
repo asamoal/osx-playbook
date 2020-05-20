@@ -6,8 +6,14 @@ configure_sudoers: yes
 configure_terminal: yes
 configure_osx: yes
 
+<<<<<<< HEAD
+=======
+dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+>>>>>>> c45f980140d0d4fa59c29b578a9d0d3bfae8c4cf
 dotfiles_files:
-  - .bash_profile
+  - .zshrc
   - .gitignore
   - .gitconfig
   - .inputrc
@@ -35,10 +41,14 @@ homebrew_installed_packages:
   - gettext
   - gifsicle
   - git
+<<<<<<< HEAD
   - gcc
   - cmake
   - asio
   - boost
+=======
+  - github/gh/gh
+>>>>>>> c45f980140d0d4fa59c29b578a9d0d3bfae8c4cf
   - go
   - scala
   - erlang
@@ -46,7 +56,6 @@ homebrew_installed_packages:
   - wireshark
   - consul
   - gpg
-  - hub
   - httpie
   - iperf
   - libevent
@@ -100,6 +109,7 @@ homebrew_cask_apps:
   - visual-studio-code-insiders
   - docker
   - dropbox
+<<<<<<< HEAD
   - zoomus
   - dotnet-sdk
   - firefox-developer-edition
@@ -126,6 +136,16 @@ homebrew_cask_apps:
   - zeplin
   - postman
   - handbrake-nightly
+=======
+  - firefox
+  - google-chrome
+  - handbrake
+  - licecap
+  - sequel-pro
+  - slack
+  - sublime-text
+  - transmit
+>>>>>>> c45f980140d0d4fa59c29b578a9d0d3bfae8c4cf
   - vagrant
   - vagrant-manager
   - adobe-creative-cloud
